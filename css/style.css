@@ -1,73 +1,261 @@
-body    {
-   
 
-   background-image: url(fulvo.jpg);
-    margin: 0px;
-    padding:0px;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+body{
+    padding: 0;
+	margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    scroll-behavior: smooth;
+    font-family: 'Carlito', sans-serif;
 }
-
-header{
-    display: flex;
-    min-height: 50px;
-    background-color: greenyellow;
-    align-items: center;
-    padding: 10px;
-    justify-content: space-between;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-}
-
-a{
-    text-decoration: none;
-    
-}
-
-a:hover {
-    color: white;
-    
-}
-
-.logo img{
-    height: 50px;
-   
-}
-.menu { 
-
-    list-style: none;
-     padding: 0;
-     margin:auto;
-     display: flex;
-     justify-content: center;
-     width: 100%;
-
-}
-
-
-nav ul li a {
-    display: block;
-    padding: 10px;
-    color: black;
-    font-weight: bold;
-  }
-
-  .Golappzo{
-    color:black;
-  }
-
-  .Golappzo:hover{
+.header{
+    background: #11998e;
     color:white;
-  }
+}
+.navbar{
+    display:flex;
+    background: rgba(0, 0, 0, 0.849);
+    align-items: center;
+    padding: 10px 40px;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
 
-  @media (max-width: 700px){
-    header{
-        flex-direction: column;
+}
+
+.navbar ul li {
+    margin-left:10px;
+    margin-right:10px;
+    
     }
-    nav{
-        padding: 10px 0px;
+
+.navbar ul li a{
+text-decoration: none;
+color:white;
+
+}
+.navbar ul li a:hover{
+    color:#11998e;
+    
     }
-  }
+.logo{
+    width: 130px;
+}
+
+#portada{
+    background: #11998e;
+	background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+	background: linear-gradient(to right, #38ef7e4c, #11998e64),
+		url("../img/portada.jpg");
+
+	min-height: 70vh;
+	background-size: cover;
+
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    color:white;
+}
+.contenedor__portada{
+    max-width:900px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.titulo__portada{
+    font-size: 40px;
+}
+
+.parrafo__portada{
+    font-size: 20px;
+    max-width: 500px;
+    margin-bottom: 30px;
+
+}
+
+.btn__portada{
+    text-decoration: none;
+    color:white;
+    background: rgba(0, 0, 0, 0.671);
+    padding: 8px 30px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn__portada:hover{
+    background: black;
+
+}
+
+#acercade {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor__info{
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor__descripcion{
+    margin:auto;
+    padding:5%;
+}
+
+.contenedor__img{
+    margin:auto;
+}
+.contenedor__img img{
+    max-width: 400px;
+}
+
+
+/*Sección danzas típicas*/
+#danzas-tipicas {
+    padding: 100px 0;
+   background-image: url("../img/danzas.jpg");
+   background: linear-gradient(to right, #000000b3, #11998e64),
+		url("../img/danzas.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+}
+.contenedor__danzas thead{
+    background: #11998e;
+    color:white;
+}
+
+.contenedor__danzas table{
+   border-spacing: 0;
+   border: 1px solid black;
+   background: rgba(255, 255, 255, 0.817);
+}
+
+.contenedor__danzas td{
+    padding: 10px 20px;
+}
+.contenedor__danzas{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.contenedor__danzas h2{
+    color:white;
+}
+
+.contenedor__danzas p{
+    text-align: center;
+}
+
+.td__danza{
+    font-weight: bold;
+}
+
+.td__danzadescripcion{
+    text-align: justify;
+}
+
+
+
+/*Sección gastronomía*/
+.contenedor__gastronomia{
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0 0 50px 0;
+}
+
+.contenedor__gastronomia img{
+    max-width: 200px;
+}
+
+.contenedor__gastronomia p{
+    text-align: center;
+}
+
+.boton_volver{
+    text-align: center;
+    padding:0 0 50px 0;
+}
+
+
+/*Sección contacto*/
+
+#contacto {
+    padding: 100px 0;
+   background-image: url("../img/contacto.jpg");
+   background: linear-gradient(to right, #000000b3, #11998e64),
+		url("../img/contacto.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+}
+
+.contenedor__contacto{
+    background: rgba(255, 255, 255, 0.817);
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0 0 20px 0;
+}
+
+.contenedor__contacto2{
+    background: rgba(255, 255, 255, 0.817);
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0;
+}
+
+.contenedor__contacto3{
+    background: rgba(255, 255, 255, 0.817);
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0 0 50px 0;
+}
+.footer{
+    background: black;
+    padding: 20px 0;
+    color:white;
+    }
+
+    .contenedor__footer{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+.icon{
+ width:20px; 
+ height:20px;
+ margin-right: 10px;
+
+    }
